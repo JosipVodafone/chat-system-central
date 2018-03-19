@@ -31,7 +31,7 @@ public class ServerHandlerConnector {
 		System.out.println("Scannig DB on Clients and open Connection port ...");
 
 		Connection con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/client_data", "postgres",
-				"admin");
+				"root");
 
 		PreparedStatement deleteAll = con.prepareStatement("DELETE FROM server_connection_port");
 		System.out.println("Successfully DELETED " + deleteAll.executeUpdate() + " ROWS");
